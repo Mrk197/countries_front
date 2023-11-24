@@ -85,7 +85,7 @@ const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${REACT_APP_URL_API}/activities`, newActividad);
+            const response = await axios.post(`/activities`, newActividad);
             alert("Se creo la actividad " + response.data.nombre);
             setnewActividad({
                 nombre: '',

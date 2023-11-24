@@ -5,7 +5,7 @@ const {REACT_APP_URL_API} = process.env;
 export const getCountries = () => {
     return async function(dispatch) {
         try {
-            const response = await axios(`${REACT_APP_URL_API}/countries`);
+            const response = await axios(`/countries`);
             
             return dispatch({
                 type: actionsTypes.GET_COUNTRIES,
@@ -20,7 +20,7 @@ export const getCountries = () => {
 export const searchCountryByName = (name) => {
     return async function (dispatch) {
         try {
-            const response = await axios(`${REACT_APP_URL_API}/countries?name=${name}`);
+            const response = await axios(`/countries?name=${name}`);
             return dispatch({
                 type: actionsTypes.SEARCH_COUNTRIES,
                 payload: response.data
@@ -34,7 +34,7 @@ export const searchCountryByName = (name) => {
 
 export const filterCountries = (filterValue, filterType) => {
     return async function (dispatch) {
-        const response = await axios(`${REACT_APP_URL_API}/countries`);
+        const response = await axios(`/countries`);
         const verifySeason = (activities, filterValue) =>{
             const result = activities.filter( activity => activity.Season.temporada === filterValue);
             if(result.length > 0) return true;
@@ -73,7 +73,7 @@ export const orderByName = (orderFilter) => {
 
 export const getSeasons = () => {
     return async function (dispatch) {
-        const response = await axios(`${REACT_APP_URL_API}/activities/season`);
+        const response = await axios(`/activities/season`);
         return dispatch({
             type: actionsTypes.GET_SEASONS,
             payload: response.data
@@ -83,7 +83,7 @@ export const getSeasons = () => {
 
 export const getDifficulty = () => {
     return async function (dispatch) {
-        const response = await axios(`${REACT_APP_URL_API}/activities/difficulty`);
+        const response = await axios(`/activities/difficulty`);
         return dispatch({
             type: actionsTypes.GET_DIFFICULTY,
             payload: response.data
@@ -94,7 +94,7 @@ export const getDifficulty = () => {
 export const getDetailCountry = (idCountry) => {
     return async function (dispatch) {
         try {
-            const response = await axios(`${REACT_APP_URL_API}/countries/${idCountry}`);
+            const response = await axios(`/countries/${idCountry}`);
             return dispatch({
                 type: actionsTypes.GET_DETAIL_ACTIVITY,
                 payload: response.data

@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
+import axios from 'axios';
 
 import './index.css';
 import App from './App';
 import { store } from './redux/store';
 import reportWebVitals from './reportWebVitals';
+
+// axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'https://countriesback-production-bfbc.up.railway.app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
