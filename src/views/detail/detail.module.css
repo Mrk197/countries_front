@@ -1,0 +1,20 @@
+.cardDetail {
+    background-color: #f9fdfdee;
+    color: #071952;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5%;
+}
+
+.navlink{
+    text-decoration: none;
+    background-color: #35A29F;
+    color: #00235B;
+    border-radius: 5px;
+    width: 40%;
+    padding: 1%;
+}
+
+.navlink:hover{
+    background-color: #98DFD6;
+}

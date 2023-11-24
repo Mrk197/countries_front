@@ -1,0 +1,27 @@
+.card{
+    background-color: #f9fdfdee;
+    color: #071952;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card img {
+    border-radius: 5px;
+    width: 100%;
+    height: 110px;
+}
+
+.navlink{
+    text-decoration: none;
+    color: #071952;
+    font-size: small;
+}

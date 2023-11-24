@@ -1,0 +1,23 @@
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.page button{
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+}
+
+.page button:hover{
+    background-color: #98DFD6;
+}
+
+.selected {
+    background-color: #35A29F;
+}
+
+.noselected {
+    background-color: #98DFD6;
+}

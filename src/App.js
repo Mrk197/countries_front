@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import {Routes, Route, useLocation} from 'react-router-dom';
+
+import Landing from './views/landing/landing';
+import Home from './views/home/home';
+import Detail from './views/detail/detail';
+import ActivityForm from './views/activityForm/activityForm';
+import Error from './views/error/error';
+import NavBar from './components/navbar/navbar';
+import NavBarFiltros from './components/navbar/navbarFiltros';
+import Activities from './views/activities/activities';
+
 import './App.css';
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {location.pathname !== "/" && location.pathname !== "/home"  && <NavBar />}
+      {location.pathname === "/home" && <NavBarFiltros />}
+      <Routes>
+        <Route path="/" element={<Landing/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/:idCountry" element={<Detail/>} />
+        <Route path="/newActivity" element={<ActivityForm/>} />
+        <Route path="/activities" element={<Activities/>} />
+        <Route path="*" element={<Error />} />
+      </Routes>
     </div>
   );
 }

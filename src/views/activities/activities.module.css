@@ -1,0 +1,8 @@
+.cardActivities {
+    background-color: #f3f7a1f6;
+    color: #071952;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    border-radius: 5px;
+}

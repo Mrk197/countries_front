@@ -1,0 +1,9 @@
+.searchbar{
+    margin-right: 10px;
+}
+
+.searchbar input[type=text]{
+    background-color: #F2F7A1;
+    color: #071952;
+    border-radius: 5px;
+}
